@@ -110,4 +110,104 @@ let jsonStringx = `[
     const element = jsonObjectx[i];
     console.log("element=",element.comment);
   }
-  
+  //////opdr6
+  let jsonStringx2 = `[
+    {
+      "albumId": 1,
+      "id": 1,
+      "title": "accusamus beatae ad facilis cum similique qui sunt",
+      "url": "https://via.placeholder.com/600/92c952",
+      "thumbnailUrl": "https://via.placeholder.com/150/92c952"
+    },
+    {
+      "albumId": 1,
+      "id": 2,
+      "title": "reprehenderit est deserunt velit ipsam",
+      "url": "https://via.placeholder.com/600/771796",
+      "thumbnailUrl": "https://via.placeholder.com/150/771796"
+    },
+    {
+      "albumId": 1,
+      "id": 3,
+      "title": "officia porro iure quia iusto qui ipsa ut modi",
+      "url": "https://via.placeholder.com/600/24f355",
+      "thumbnailUrl": "https://via.placeholder.com/150/24f355"
+    },
+    {
+      "albumId": 1,
+      "id": 4,
+      "title": "culpa odio esse rerum omnis laboriosam voluptate repudiandae",
+      "url": "https://via.placeholder.com/600/d32776",
+      "thumbnailUrl": "https://via.placeholder.com/150/d32776"
+    },
+    {
+      "albumId": 1,
+      "id": 5,
+      "title": "natus nisi omnis corporis facere molestiae rerum in",
+      "url": "https://via.placeholder.com/600/f66b97",
+      "thumbnailUrl": "https://via.placeholder.com/150/f66b97"
+    },
+    {
+      "albumId": 1,
+      "id": 6,
+      "title": "accusamus ea aliquid et amet sequi nemo",
+      "url": "https://via.placeholder.com/600/56a8c2",
+      "thumbnailUrl": "https://via.placeholder.com/150/56a8c2"
+    }
+  ]`;
+  let objectAlbums = JSON.parse(jsonStringx2);
+  let ulList = document.querySelector('ul');
+  for (let i = 0; i < objectAlbums.length; i++) {
+    const album = objectAlbums[i];
+    ulList.innerHTML += "<li>"+album.title+"</li>";
+  }
+  ///opdr7
+  let objectx =
+  { 
+    name: 'John', 
+    age: 20,
+    marks: {
+        science: 70,
+        math: 75
+    }
+};
+let jsonx = JSON.stringify(objectx);
+console.log("----opdr7----");
+console.log("objectx:",objectx);
+console.log("jsonx:",jsonx);
+
+///opdr8
+
+let objArray = 
+`[
+	{ 
+		name: 'Wolverine', 
+		age: 38,
+		marks: {
+			science: 20,
+			math: 15
+		}
+	},
+	{ 
+		name: 'Xavier', 
+		age: 64,
+		marks: {
+			science: 95,
+			math: 90
+		}
+	},
+	{ 
+		name: 'Magneto', 
+		age: 68,
+		marks: {
+			science: 90,
+			math: 85
+		}
+	}
+]`;
+let jsonArray = JSON.stringify(objArray);
+console.log("objArray", objArray);
+console.log("jsonjArray", jsonArray);
+
+
+
